@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sathvik Polisetty | Web Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Sathvik Polisetty</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    
+    <h1>Hi, I'm Sathvik<br>Web Developer & Designer</h1>
+    <p>I build beautiful and responsive web apps using modern technologies.</p>
+    <a class="btn-primary" href="#contact">Contact Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <h2 class="section-title">About Me</h2>
+    <p>I am a Computer Science undergrad passionate about creating responsive, accessible, and modern web interfaces. With strong fundamentals in HTML, CSS, JavaScript, and backend basics, I aim to build meaningful user experiences.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3><i class="fa-solid fa-laptop-code"></i> HTML & CSS</h3>
+        <p>Building structured, clean, and responsive UIs using semantic HTML and modern CSS.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-brands fa-js-square"></i> JavaScript</h3>
+        <p>Dynamic user interactions and DOM manipulations using vanilla JavaScript and frameworks.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-database"></i> Backend Basics</h3>
+        <p>Knowledge of databases, SQL, and integrating frontend with backend APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Smart Home Automation</h3>
+        <p>Built a voice-controlled smart home system integrating 3D awareness features.</p>
+      </div>
+      <div class="card">
+        <h3>Movie Ticket Booking System</h3>
+        <p>Designed and coded a full-stack project with SQL, HTML, and PHP backend.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive Portfolio</h3>
+        <p>This very portfolio you’re seeing – fully responsive, semantic and animated.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="hidden" name="to_email" value="polisettysathvik@gmail.com" />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="form-status"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sathvik Polisetty | 
+      <a href="mailto:polisettysathvik@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> |
+      <a href="tel:+91 6281254968"><i class="fa-solid fa-mobile-screen-button"></i> +91 6281254968</a> | 
+      <a href="https://github.com/Sathvik257" target="_blank"><i class="fab fa-github"></i> GitHub</a> | 
+      <a href="https://www.linkedin.com/in/sathvik-polisetty-6a7101357/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

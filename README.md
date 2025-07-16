@@ -1,40 +1,37 @@
-# Sathvik257.github.io
-# 🌐 Sathvik Polisetty – Personal Portfolio
+# 🌐 Sathvik's Personal Portfolio
 
-Welcome to the source code for my personal portfolio website, hosted at [sathvik257.github.io](https://sathvik257.github.io).  
-This site showcases my projects, skills, resume, and contact information as a Computer Science & Engineering student.
-
----
+Welcome to my personal website — built using HTML, CSS, and JavaScript — hosted with **GitHub Pages**.
 
 ## 🚀 Features
 
-- 🧑‍💻 About Me Section – Learn who I am and what I do
-- 🧠 Skills – Languages, tools, and frameworks I work with
-- 📂 Projects – Highlights of my best and recent work
-- 📄 Resume – Downloadable PDF resume
-- 📬 Contact – Form or details to reach out to me
-- 📱 Responsive – Fully mobile-friendly design
-- 🎨 Smooth Animations – Clean, minimal UI with subtle effects
+- 👨‍💻 About Me Section
+- 🛠️ Skills & Technologies
+- 📂 Projects Showcase
+- 📞 Contact Form
+- 💡 Clean and responsive design
 
----
+## 🛠️ Technologies Used
 
-## 🛠️ Built With
+- HTML5
+- CSS3 (Flexbox, Grid, Animations)
+- JavaScript (DOM Manipulation)
+- GitHub Pages for hosting
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- *(Optional)* Tailwind CSS / Bootstrap if you used them
-- Hosted using **GitHub Pages**
+## 📸 Preview
 
----
+![Website Preview](https://your-screenshot-url.com) <!-- Replace with actual image link if available -->
 
-## 📁 Folder Structure
+## 🧪 Local Setup
 
 ```bash
-Sathvik257.github.io/
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   └── images, resume.pdf, etc.
-└── README.md
+# Clone the repository
+git clone https://github.com/Sathvik257/Sathvik257.github.io.git
+
+# Open index.html in your browser
+
+Or simply visit the live site at:
+🔗 sathvik257.github.io
+
+📬 Contact
+Have a question or want to collaborate?
+Email: polisettysathvik@email.com

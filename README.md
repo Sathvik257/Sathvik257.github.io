@@ -17,10 +17,6 @@ Welcome to my personal website — built using HTML, CSS, and JavaScript — hos
 - JavaScript (DOM Manipulation)
 - GitHub Pages for hosting
 
-## 📸 Preview
-
-![Website Preview](https://your-screenshot-url.com) <!-- Replace with actual image link if available -->
-
 ## 🧪 Local Setup
 
 ```bash

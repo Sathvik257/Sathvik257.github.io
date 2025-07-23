@@ -368,33 +368,6 @@ html {
   .hamburger { display: flex; }
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background: linear-gradient(270deg, #18181b, #23272f, #18181b);
-  color: #e5e7eb;
-}
-body.dark-mode header, body.dark-mode .container, body.dark-mode .card, body.dark-mode form, body.dark-mode footer {
-  background: #23272f !important;
-  color: #e5e7eb !important;
-}
-body.dark-mode .logo, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-  color: #fff !important;
-}
-body.dark-mode .btn-primary, body.dark-mode .btn-secondary, body.dark-mode button[type="submit"] {
-  background: #2563eb !important;
-  color: #fff !important;
-}
-body.dark-mode .nav-links a::after {
-  background: #fff;
-}
-body.dark-mode .card, body.dark-mode form {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-body.dark-mode .testimonial-card {
-  background: #18181b;
-  color: #e5e7eb;
-}
-
 /* Testimonials */
 .testimonials-grid {
   gap: 2rem;
@@ -497,9 +470,13 @@ section, .card, .testimonial-card {
   transition: transform 0.3s;
   display: flex;
   flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
-.project-card:hover {
-  transform: translateY(-5px);
+.project-card:hover, .project-card:focus-within {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
 }
 .project-preview {
   height: 200px;

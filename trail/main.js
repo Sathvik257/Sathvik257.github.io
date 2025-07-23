@@ -278,17 +278,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll();
 
-  // Dark Mode Toggle
-  const darkToggle = document.getElementById('dark-toggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
-    document.body.classList.add('dark-mode');
-  }
-  darkToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-
   // Hamburger Menu
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
@@ -397,5 +386,52 @@ window.addEventListener('DOMContentLoaded', () => {
       animateSkillBars();
       barsAnimated = true;
     }
+  }
+
+  // List of specific repos to display (using exact names from GitHub)
+  const repoNames = [
+    'Justice-GPT',
+    'Smart-Home',
+    'Smart-Resume-Builder-with-AI-Suggestions',
+    'Battle-Ship-Blitz'
+  ];
+  const showcase = document.querySelector('.project-showcase');
+  if (showcase) {
+    Promise.all(
+      repoNames.map(name =>
+        fetch(`https://api.github.com/repos/Sathvik257/${name}`)
+          .then(res => res.ok ? res.json() : null)
+      )
+    ).then(repos => {
+      showcase.innerHTML = '';
+      repos.forEach(repo => {
+        if (repo) {
+          // Choose a themed Unsplash image based on project name
+          let imageUrl = '';
+          if (repo.name === 'Justice-GPT') imageUrl = 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80'; // justice theme
+          else if (repo.name === 'Smart-Home') imageUrl = 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80'; // smart home theme
+          else if (repo.name === 'Smart-Resume-Builder-with-AI-Suggestions') imageUrl = 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80'; // resume/ai theme
+          else if (repo.name === 'Battle-Ship-Blitz') imageUrl = 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80'; // battleship theme
+          else imageUrl = 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80'; // fallback
+
+          const card = document.createElement('div');
+          card.className = 'project-card';
+          card.style.cursor = 'pointer';
+          card.innerHTML = `
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" aria-label="View ${repo.name} on GitHub" tabindex="0" style="text-decoration: none; color: inherit; display: block; height: 100%; width: 100%">
+              <div class="project-preview">${repo.name}</div>
+              <div class="project-info">
+                <h3>${repo.name}</h3>
+                <p>${repo.description ? repo.description : 'No description provided.'}</p>
+                <div class="project-tech">
+                  <span class="tech-tag">${repo.language ? repo.language : 'N/A'}</span>
+                </div>
+              </div>
+            </a>
+          `;
+          showcase.appendChild(card);
+        }
+      });
+    });
   }
 });
